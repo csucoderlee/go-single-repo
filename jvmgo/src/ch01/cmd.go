@@ -7,11 +7,11 @@ import (
 )
 
 type Cmd struct {
-	helpFlag bool
+	helpFlag    bool
 	versionFlag bool
-	cpOption string
-	class string
-	args []string
+	cpOption    string
+	class       string
+	args        []string
 }
 
 func main() {
@@ -47,10 +47,9 @@ func parseCmd() *Cmd {
 }
 
 func startJVM(cmd *Cmd) {
-	fmt.Printf("classpath:%s args:%v\n", cmd.cpOption, cmd.class, cmd.args)
+	fmt.Printf("classpath:%s class:%s args:%v\n", cmd.cpOption, cmd.class, cmd.args)
 }
 
 func printUsage() {
 	fmt.Printf("Usage:%s [-options] class [args...]\n", os.Args)
 }
-
